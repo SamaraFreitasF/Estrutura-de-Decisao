@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+ <link rel="stylesheet" href="style.css">
+<body>
+    <h1>Times Paulistas: O Canto da Sua Torcida!</h1>
+
+    <span>Qual dos seguintes times de São Paulo você torce? (São Paulo, Palmeiras, Corinthians, Santos)</span> 
+    
+    <input type="text" id="input_time"> <br>
+
+    <button onclick="Fale()">Fale sobre esse time</button>
+    <div id="div_mensagem"></div>
+</body>
+</html>
+
+<script>
+    function Fale(){
+    var time = input_time.value;
+    
+    if(time == "Corinthians"){
+         div_mensagem.innerHTML = '<span style="background-color: black; color: white; font-weight: bold">Salve o Corinthians</span> <br> <img src="https://yt3.googleusercontent.com/RgGfS8ggQmdhw8iaQCMn-QO-nip6i134W0raYz3b6bMucUxvIKitGwslpZRFx7FJVmqygNwn1w=s900-c-k-c0x00ffffff-no-rj" alt="corinthians" width= "200px" display: flex; >';
+    }else if(time == "Palmeiras"){
+        div_mensagem.innerHTML = `<span style="background-color: green; color: white">Salve o alviverde imponente</span>`;
+    }else if(time == "Santos"){
+        div_mensagem.innerHTML = `<span style="background-color: white; color: black">Agora quem dá a bola é o Santos</span>`;
+    }else if(time =="São Paulo"){
+        div_mensagem.innerHTML = `<span style="background-color: black; color: red">Salve o Tricolor paulista</span>`;
+    }else {
+        div_mensagem.innerHTML = `<span style="background-color: red">Tem certeza que esse é paulista?</span>`;
+    }
+    }
+</script>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Análise da média de notas</h1>
+
+    <span>Informe a primeira nota:</span>
+    <input type="text" id="input_nota1"> <br>
+    
+    <span>Informe a segunda nota:</span>
+    <input type="text" id="input_nota2"> <br>
+
+    <button onclick="verificar()">Verificar situação</button>
+    <div id="div_mensagem"></div>
+</body>
+</html>
+
+<script>
+    function verificar(){
+        var nota1 = Number(input_nota1.value);
+        var nota2 = Number(input_nota2.value);
+
+        var media = (nota1 + nota2) / 2;
+
+        if(media >= 6){
+            alert("Parabéns, aprovado");
+        }else{
+            alert("Tente outra vez...");
+        }
+    }
+</script>

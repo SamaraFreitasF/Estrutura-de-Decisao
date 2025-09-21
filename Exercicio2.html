@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Controle de Refrigerante</h2>
+    <span>Informe a quantidade de latinhas de refrigerante que você consome diariamente: </span>
+    <input type="text" id="input_quantidade"> 
+
+    <button onclick="quantRefris()">Quantos Refris?</button>
+
+    <div id="div_mensagem"></div>
+</body>
+</html>
+
+<script>
+    function quantRefris(){
+        var quantidade = Number(input_quantidade.value);
+        var quantAno = quantidade * 365;
+        
+        if(quantAno <= 500){
+            div_mensagem.innerHTML = `Você consome ${quantAno} latinhas de refrigerante anualmente.`;
+            
+        } else {
+            div_mensagem.innerHTML = `Você consome ${quantAno} latinhas de refrigerante anualmente. <br> Cuidado com a diabetes!`;
+            
+        }
+
+    }
+</script>

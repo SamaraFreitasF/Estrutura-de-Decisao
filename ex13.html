@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>POKÉMON</h1>
+
+    <span>Qual Pokémin você escolheria?</span>
+
+    <select id="select_opcao">
+    <option value="Bulbasaur">Bulbasaur</option>
+    <option value="Charmander">Charmander </option>
+    <option value="Squirtle">Squirtle</option>
+    </select>
+   
+    <br>
+
+    <button onclick="escolher()">Escolher Pokémon</button>
+    <div id="div_mensagem"></div>
+</body>
+</html>
+
+<script>
+   
+    function escolher(){
+        var opcao = select_opcao.value;
+
+        if(opcao == "Bulbasaur"){
+            div_mensagem.innerHTML = `<img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png" alt="Bulbasaur" width="200">`;
+        }else if(opcao == "Charmander"){
+            div_mensagem.innerHTML = `<img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png" alt="Charmander" width="200">`;
+        }else if (opcao == "Squirtle"){
+            div_mensagem.innerHTML = `<img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png" alt="Squirtle" width="200">`;
+        }
+    
+ }
+</script>

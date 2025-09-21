@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Meta de Economia: Você Está no Caminho Certo?</h1>
+
+    <span>Qual é a sua meta de economia?</span>
+    <input type="text" id="input_economia"> <br>
+
+    <span>Quanto você tem guardado?</span>
+    <input type="text" id="input_meta"> <br>
+
+    <button onclick="Analisar()">Analisar economia</button>
+    <div id="div_mensagem"></div>
+
+</body>
+</html>
+
+<script>
+    function Analisar() {
+        var economia = Number(input_economia.value);
+        var meta = Number(input_meta.value);
+
+        var ultrapassada =  meta - economia;
+       
+
+        if(meta == economia) {
+            div_mensagem.innerHTML = `Parabéns, meta alcançada!`;
+        } else if (meta > economia) {
+            div_mensagem.innerHTML = `Meta ultrapassada em ${ultrapassada.toLocaleString("pt-BR", {style:"currency", currency:"BRL"})}`;
+        }else {
+            div_mensagem.innerHTML = `Força! Ainda em busca da meta! Falta ${ultrapassada.toLocaleString("pt-BR",{style:"currency", currency:"BRL"})}`;
+        }
+    }
+</script>

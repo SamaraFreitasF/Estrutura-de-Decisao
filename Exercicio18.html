@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Teste de divisibilidade</h1>
+
+    <span>Informe um número:</span>
+    <input type="text" id="input_num1"> <br>
+
+    <span>Informe outro número:</span>
+    <input type="text" id="input_num2"><br>
+
+    <button onclick="Testar()">Testar</button>
+    <div id="div_mensagem"></div>
+</body>
+</html>
+
+<script>
+    function Testar(){
+        var num1 = Number(input_num1.value);
+        var num2 = Number(input_num2.value);
+
+        var divisao = num1 / num2;
+
+        if(divisao == 0){
+            div_mensagem.innerHTML = `Positivo`;
+        }else{
+            div_mensagem.innerHTML = `Negativo`;
+        }
+    }
+</script>

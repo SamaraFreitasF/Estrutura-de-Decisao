@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Mercado BOM DOCE</h1>
+
+    <span>Quantos chocolates você comprou?</span>
+    <input type="text" id="input_chocolates"> <br>
+
+    <button onclick="Compra()">Compra</button>
+    <div id="div_mensagem"></div>
+</body>
+</html>
+
+<script>
+    preco = 0;
+    function Compra(){
+        var chocolates = Number(input_chocolates.value);
+       
+        if(chocolates > 12){
+        preco = chocolates * 2.5;
+        div_mensagem.innerHTML = `O valor da sua compra foi de ${preco.toLocaleString("pt-BR", {style: "currency", currency: "BRL"})}`;
+        }else{
+        preco = chocolates * 3;
+        div_mensagem.innerHTML = `O valor da sua compra foi de ${preco.toLocaleString("pt-BR", {style: "currency", currency: "BRL"})}`;
+        }
+    }
+</script>
